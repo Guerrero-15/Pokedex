@@ -7,64 +7,29 @@ import PokedexInfo from './pages/PokeInfo'
 
 function App() {
 
-  /*Para este proyecto se necesita del uso de REACT ROOTER DOM quien nos 
-  apoyará a crear rutas dentro de nuestra misma página web
-  para poder instalarlo usamos npm i react-router-dom
-  De igual manera tenemos que tene r
-  npm install react-redux
-  que es el React Tedux para hacer los useStates globales 
-  npm install @reduxjs/toolkit
-  Para crear los slices
-  */
-
-
-  /*
-  FUNCIONALIDADES
-  Inpunt o buscador poder acceder al POKEINFO (En el 3)
-  Filtrador por Tipo de Pokemon
-  
-  COMPONENTES
-  
-  1. INPUTNAME 
-  2. POKEDEX COMPLETA RENDERIZADO LOS POKEMONS 
-  3. INFORMACI[ON DE EL POKEMON SELECCIONADO ES ES POR MEDIO DEL ID
-  
-  
-  */
-
-
-
   return (
-
-
-
     <div>
-
-
-{/*Componete header que se quede fijo */}
-      <p>Esto no importa en que pagina o vista este siempre estará arriba</p>
+     <h1 style={{ fontSize: '30px', fontWeight: 'bold', color: 'purple' }}>¡Atrápalos a todos!</h1>
 
       <Routes>
-
         <Route path="/" element={<Home />} />
-
-
         <Route element={<ProtectedRoutes />} >
-
-
           <Route path="/pokedex" element={<Pokedex />} />
           <Route path='/pokedex/:id' element={<PokedexInfo />} />
         </Route>
-
       </Routes>
 
-      <footer>
-        <h3>Hola SOY EL FOOTER, falta agregarte el footer</h3>
+      <footer style={{
+        textAlign: 'center',
+        padding: '2rem',
+        marginTop: '2.5em'
+      }}>
+        <h3 style={{ color: 'purple', fontFamily: 'Arial, sans-serif', fontSize: '2.0em' }}>¡Bienvenido a la Pokedex!</h3>
+        <p style={{ color: 'orange', fontFamily: 'Arial, sans-serif', fontSize: '1.2em' }}>Encuentra todos los Pokémon y conviértete en el mejor entrenador.</p>
       </footer>
-
+      
     </div >
-
   )
 }
 
-export default App
+export default App;
